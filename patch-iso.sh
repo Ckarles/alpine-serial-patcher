@@ -6,7 +6,7 @@ GIT_COMMIT=$(git rev-parse --short HEAD 2>/dev/null || echo test)
 
 ISO="${1}"
 ISO_BASENAME=${ISO##*/}
-CUSTOM_ISO=${ISO%/*}/${ISO_BASENAME%.iso}-patched_${GIT_COMMIT}.iso
+CUSTOM_ISO=${ISO_BASENAME%.iso}-patched_${GIT_COMMIT}.iso
 
 OVERLAY_LOWER_DIR="original"
 OVERLAY_UPPER_DIR="patches"
